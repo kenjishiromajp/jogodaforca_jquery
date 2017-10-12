@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="cadastro" class="visivel tela bg-black">
+        <form class="column -justify-center -align-center" action="">
+            <h2>Venha Brincar de Jogo da Forca!</h2>
+            <div class="form-group">
+                <label for="palavra">Palavra</label>
+                <input id="palavra" type="text">
+            </div>
+            <button>CADASTRAR</button>
+        </form>
+    </div>
+    <main id="forca" class="tela">
+        <div class="row -align-center">
+            <h3>LETRAS UTILIZADAS</h3>
+            <div class="row letras-usadas"></div>
+        </div>
+        <div class="letras-forca">
+            <svg id="boneco" viewBox="0 0 162.5 374" style="enable-background:new 0 0 162.5 374;" xml:space="preserve">
+                <g class="corpo">
+                    <circle class="st0" cx="112" cy="85" r="32.5" />
+                    <line class="st0" x1="112" y1="116" x2="112" y2="199" />
+                    <line class="st0" x1="112" y1="135" x2="63" y2="158" />
+                    <line class="st0" x1="112" y1="135" x2="161" y2="158" />
+                    <line class="st0" x1="112" y1="199" x2="63" y2="256" />
+                    <line class="st0" x1="112" y1="199" x2="161" y2="256" />
+                </g>
+                <polyline class="st0" points="112,54 112,2 2,2 2,374 " />
+            </svg>
+            <div class="letras">
+            </div>
+        </div>
+    </main>
+
+    <div id="perdeu" class="tela bg-black">
+        <img src="imgs/perdeu.svg" alt="">
+        <button class="btn-recomecar">Recomeçar</button>
+    </div>
+    <div id="ganhou" class="tela bg-white">
+        <img src="imgs/ganhou.svg" alt="">
+        <button class="btn-recomecar">Recomeçar</button>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
