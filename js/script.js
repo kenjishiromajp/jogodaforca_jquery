@@ -22,12 +22,6 @@ var letrasUsadas = [];
 var erros = 0;
 var jogocomecou = false;
 
-function minhaFuncaoMarota(ev) {
-    ev.preventDefault();
-    //Minhas linhas de códigos marota
-}
-$(".botao").click(minhaFuncaoMarota)
-
 function comecarJogo() {
 
     jogocomecou = true;

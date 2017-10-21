@@ -4,6 +4,8 @@
 
 <a href="#"><img width="728" src="https://raw.githubusercontent.com/kenjishiromajp/jogodaforca_jquery/master/imgs/capa.png" alt="Jogo da Forca com Jquery" /></a>
 
+Pode baixar a apresentação clicando <a href="https://raw.githubusercontent.com/kenjishiromajp/jogodaforca_jquery/master/source/apresentacao.pdf">neste link</a>
+
 ### OBJETIVO DO JOGO
 É um simples jogo da Forca, você pode cadastrar uma palavra e depois chamar o amig@ para adivinhar qual a palavra utilizando o teclado!
 
