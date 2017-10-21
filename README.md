@@ -2,7 +2,9 @@
 
 > Jogo da Forca Simples para aprendizado do jQuery para a turma do <a href="http://reprograma.com.br/">Reprograma!</a>
 
-<a href="#"><img width="728" src="https://raw.githubusercontent.com/kenjishiromajp/jogodaforca_jquery/master/imgs/capa.png" alt="Jogo da Forca com Jquery" /></a>
+<a href="https://kenjishiromajp.github.io/jogodaforca_jquery/"><img width="728" src="https://raw.githubusercontent.com/kenjishiromajp/jogodaforca_jquery/master/imgs/capa.png" alt="Jogo da Forca com Jquery" /></a>
+
+Pode acessar o jogo demo clicando <a href="https://kenjishiromajp.github.io/jogodaforca_jquery">neste link</a>
 
 Pode baixar a apresentação clicando <a href="https://raw.githubusercontent.com/kenjishiromajp/jogodaforca_jquery/master/source/apresentacao.pdf">neste link</a>
 
