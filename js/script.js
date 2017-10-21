@@ -9,7 +9,7 @@
 // o que é preventDefault()
 // o que boolean
 // Selecionar Elemento com jquery
-// Adicoionar classe
+// Adicionar classe
 // Remove Class
 // Toggle class com jquery
 // Criar elemento com jquery
@@ -22,8 +22,14 @@ var letrasUsadas = [];
 var erros = 0;
 var jogocomecou = false;
 
+function minhaFuncaoMarota(ev) {
+    ev.preventDefault();
+    //Minhas linhas de códigos marota
+}
+$(".botao").click(minhaFuncaoMarota)
+
 function comecarJogo() {
-    
+
     jogocomecou = true;
     $(".tela").removeClass("visivel");
     $("#forca").addClass("visivel");
@@ -37,27 +43,20 @@ function comecarJogo() {
     }
 }
 
-function recomecar(){
+function recomecar() {
     erros = 0;
     letrasUsadas = [];
     $(".letras").html(null);
     $(".letras-usadas").html(null);
-    $("#boneco .corpo > *").attr("class","st0");
+    $("#boneco .corpo > *").attr("class", "st0");
 
     $(".tela").removeClass("visivel");
     $("#cadastro").addClass("visivel");
 }
 
-$(`#cadastro form`).submit(function (ev) {
-    ev.preventDefault();
-    //Começar o jogo
-    comecarJogo();
-});
-
-$(document).keydown(function (ev) {
-    if(!jogocomecou)
+function chutarLetra(letra) {
+    if (!jogocomecou)
         return;
-    var letra = ev.key.toUpperCase();
     //Anula os meta key ctrl, shift e etc...
     if (letra.length != 1)
         return;
@@ -66,7 +65,7 @@ $(document).keydown(function (ev) {
         return;
     //Adicionar a letra no array de tentativas
     $(".letras-usadas").append("<span>" + letra + "</span>")
-    
+
     //Verificar se a letra existe
     var achei = false;
     for (var i = 0; i < palavra.length; i++) {
@@ -79,26 +78,37 @@ $(document).keydown(function (ev) {
     //Se não achou
     if (!achei) {
         //adicione a classe no corpo
-        $("#boneco .corpo > *").eq(erros).attr("class","st0 visivel");
+        $("#boneco .corpo > *").eq(erros).attr("class", "st0 visivel");
         erros++;
     }
 
-    if(erros >= 6){
+    if (erros >= 6) {
         $("#forca").toggleClass("visivel");
         $("#perdeu").toggleClass("visivel");
         jogocomecou = false;
     }
 
-    if($(".letras > span:not(.visivel)").length == 0){
+    if ($(".letras > span:not(.visivel)").length == 0) {
         $("#forca").toggleClass("visivel");
         $("#ganhou").toggleClass("visivel");
         jogocomecou = false;
     }
     //Acumular as letras
     letrasUsadas.push(letra);
+}
+
+$(`#cadastro form`).submit(function (ev) {
+    ev.preventDefault();
+    //Começar o jogo
+    comecarJogo();
 });
 
-$(".btn-recomecar").click(function(ev){
+$(document).keydown(function (ev) {
+    var letra = ev.key.toUpperCase();
+    chutarLetra(letra);
+});
+
+$(".btn-recomecar").click(function (ev) {
     ev.preventDefault();
     recomecar();
 });
